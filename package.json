@@ -1,0 +1,17 @@
+{
+  "name": "automation-exercise-cypress-pos",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Trabalho de conclusao - Automacao Web com Cypress",
+  "scripts": {
+    "test": "cypress run --browser electron --spec 'cypress/e2e/**/*.cy.js'",
+    "test:chrome": "cypress run --browser chrome --spec 'cypress/e2e/**/*.cy.js'",
+    "cy:open": "cypress open",
+    "test:headed": "cypress run --headed --browser electron --spec 'cypress/e2e/**/*.cy.js'"
+  },
+  "devDependencies": {
+    "cypress": "^14.5.0",
+    "cypress-mochawesome-reporter": "^4.0.2"
+  },
+  "engines": {"node": ">=20"}
+}

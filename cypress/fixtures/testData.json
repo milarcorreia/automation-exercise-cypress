@@ -1,0 +1,21 @@
+{
+  "password": "Teste@2026Segura",
+  "searchTerm": "Top",
+  "shipping": {
+    "company": "Projeto Pos",
+    "address1": "Rua Teste, 100",
+    "address2": "Sala 01",
+    "country": "Canada",
+    "state": "Ontario",
+    "city": "Toronto",
+    "zipcode": "M5V1A1",
+    "mobile": "5551234567"
+  },
+  "payment": {
+    "name": "QA AUTOMATION TEST",
+    "number": "4111111111111111",
+    "cvc": "123",
+    "month": "12",
+    "year": "2030"
+  }
+}

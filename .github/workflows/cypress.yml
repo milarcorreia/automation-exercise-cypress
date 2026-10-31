@@ -1,0 +1,37 @@
+name: Cypress - Trabalho Final
+on:
+  push:
+    branches: [main, master]
+  pull_request:
+  workflow_dispatch:
+
+jobs:
+  tests:
+    runs-on: ubuntu-latest
+    timeout-minutes: 35
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Instalar Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+
+      - name: Instalar dependências
+        run: npm install
+
+      - name: Executar testes Cypress
+        run: npm test
+
+      - name: Disponibilizar relatórios e evidências
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: cypress-relatorios-${{ github.run_number }}
+          path: |
+            cypress/reports/
+            cypress/screenshots/
+            cypress/videos/
+          if-no-files-found: warn
+          retention-days: 14
